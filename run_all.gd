@@ -5,7 +5,7 @@ var test_scenes := []
 
 func _ready() -> void:
 	var dir := Directory.new()
-	if dir.open("res://tests") == OK:
+	if dir.open("res://tests/3d") == OK:
 		dir.list_dir_begin(true)
 		var file_name := dir.get_next()
 		while file_name != "":
@@ -14,14 +14,14 @@ func _ready() -> void:
 
 			file_name = dir.get_next()
 
-		print("Found %d test scenes in the `tests/` folder." % test_scenes.size())
+		print("Found %d 3D test scenes in the `tests/3d` folder." % test_scenes.size())
 	else:
-		push_error("An error occurred when trying to access res://tests.")
+		push_error("An error occurred when trying to access res://tests/3d.")
 	
-	dir.make_dir_recursive("res://results")
+	dir.make_dir_recursive("res://results/3d")
 
 	for test_scene in test_scenes:
-		print("Loading test scene: %s" % test_scene)
+		print("Loading 3D test scene: %s" % test_scene)
 		var test: Node = load("res://tests/%s.tscn" % test_scene).instance()
 		add_child(test)
 		
@@ -39,7 +39,7 @@ func _ready() -> void:
 		for key in datetime:
 			datetime[key] = str(datetime[key]).pad_zeros(2)
 
-		var error := image.save_png("res://results/%s.png" % test_scene)
+		var error := image.save_png("res://results/3d/%s.png" % test_scene)
 		if error != OK:
 			push_error("Couldn't save screenshot.")
 		

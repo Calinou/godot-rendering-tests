@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://textures/checkerboard_alpha.png" type="Texture2D" id=1]
+
+[sub_resource type="Environment" id=1]
+
+[sub_resource type="CapsuleMesh" id=2]
+
+[sub_resource type="StandardMaterial3D" id=3]
+transparency = 1
+blend_mode = 3
+albedo_color = Color( 1, 1, 1, 0.180392 )
+
+[sub_resource type="StandardMaterial3D" id=4]
+transparency = 1
+blend_mode = 1
+albedo_color = Color( 0.99, 0.36, 84.14, 0.18 )
+
+[sub_resource type="StandardMaterial3D" id=5]
+transparency = 1
+blend_mode = 2
+albedo_color = Color( 25.51, 14.58, 40.69, 0.18 )
+
+[sub_resource type="StandardMaterial3D" id=6]
+transparency = 1
+albedo_color = Color( 1, 1, 1, 0.662745 )
+
+[sub_resource type="BoxMesh" id=7]
+
+[sub_resource type="StandardMaterial3D" id=9]
+transparency = 2
+alpha_scissor_threshold = 0.0
+alpha_antialiasing_mode = 1
+alpha_antialiasing_edge = 0.9
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 1.5, 1, 1 )
+
+[sub_resource type="StandardMaterial3D" id=8]
+transparency = 2
+alpha_scissor_threshold = 0.9
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 1.5, 1, 1 )
+
+[node name="TestStandardMaterial3DTransparent" type="WorldEnvironment"]
+environment = SubResource( 1 )
+script = null
+
+[node name="CapsuleMul" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -8 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+script = null
+
+[node name="CapsuleAdd" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -8 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 4 )
+script = null
+
+[node name="CapsuleSub" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -8.00044 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 5 )
+script = null
+
+[node name="CapsuleMix" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -8 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 6 )
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform( 0.702746, 0.00307796, -0.711434, 0, 0.999991, 0.00432637, 0.711441, -0.00304034, 0.702739, -2.13797, 2.42839, -1.56112 )
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform( -0.82113, 0.412642, -0.394299, -0.130715, 0.536524, 0.8337, 0.55557, 0.736117, -0.386618, 4, 0, 0 )
+script = null
+
+[node name="PlaneAlphaScissor" type="MeshInstance3D" parent="."]
+transform = Transform( 0.929126, 0.330033, 0.166741, -0.320224, 0.943661, -0.0834295, -0.184881, 0.0241221, 0.982465, 5.94606, 2.47973, -2 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 9 )
+script = null
+
+[node name="PlaneAlphaScissorAntialias" type="MeshInstance3D" parent="."]
+transform = Transform( 0.929126, 0.330033, 0.166741, -0.320224, 0.943661, -0.0834295, -0.184881, 0.0241221, 0.982465, 5.94606, 2.47973, -5 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 8 )
+script = null

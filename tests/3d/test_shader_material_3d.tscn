@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type spatial;
+
+// Just a shader to test that functionality works as expected.
+
+void vertex() {
+	/* Empty function shouldn't do anything... */
+}
+
+void fragment() {
+	ALBEDO = VERTEX + vec3(1.5);
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+
+[sub_resource type="VisualShaderNodeInput" id=4]
+default_input_values = [  ]
+input_name = "vertex"
+
+[sub_resource type="VisualShader" id=5]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Input:2
+	vec3 n_out2p0 = VERTEX;
+
+// Output:0
+	ALBEDO = n_out2p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( 0, 75 )
+version = "4.0"
+nodes/fragment/2/node = SubResource( 4 )
+nodes/fragment/2/position = Vector2( 120, 200 )
+nodes/fragment/connections = PackedInt32Array( 2, 0, 0, 0 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+
+[node name="TestShaderMaterial3D" type="Node3D"]
+script = null
+
+[node name="SphereShaderText" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+script = null
+
+[node name="SphereShaderVisual" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 6 )
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform( 0.877583, -0.229849, 0.420735, 0, 0.877583, 0.479426, -0.479426, -0.420736, 0.770151, 1.68294, 1.9177, 3.0806 )
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform( 0.999295, 0.0191428, -0.0323071, 0, 0.860316, 0.509761, 0.0375526, -0.509401, 0.859709, -0.703999, 1.76793, 3.39803 )
+script = null
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 0 )
+script = null
