@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 512, 512 )
+subdivide_width = 2
+subdivide_depth = 2
+
+[sub_resource type="BoxMesh" id=2]
+
+[sub_resource type="SphereMesh" id=3]
+
+[sub_resource type="CylinderMesh" id=4]
+
+[sub_resource type="PrismMesh" id=5]
+
+[node name="TestDirectionalLight" type="Node3D"]
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform( 0.789642, -0.163431, 0.591401, 0, 0.963873, 0.266362, -0.613567, -0.210331, 0.761115, 1.68294, 1.9177, 3.0806 )
+shadow_enabled = true
+shadow_bias = 0.008
+script = null
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+script = null
+
+[node name="Box" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+script = null
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+script = null
+
+[node name="Sphere2" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.2, -2 )
+mesh = SubResource( 3 )
+material/0 = null
+script = null
+
+[node name="Sphere3" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, -0.7, -2 )
+mesh = SubResource( 3 )
+material/0 = null
+script = null
+
+[node name="Cylinder" type="MeshInstance3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+script = null
+
+[node name="Prism" type="MeshInstance3D" parent="."]
+transform = Transform( 0.786288, 0, 0.61786, 0, 1, 0, -0.61786, 0, 0.786288, 6, 1, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform( 0.969653, 0.133329, -0.204933, 0, 0.838215, 0.54534, 0.244487, -0.52879, 0.812777, 0.0342696, 3.17783, 3.32252 )
+script = null
