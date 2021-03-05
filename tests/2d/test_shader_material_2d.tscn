@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://icon.png" type="Texture2D" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment() {
+	COLOR.rgb = vec3(1, 0, 0);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="VisualShaderNodeColorConstant" id=3]
+default_input_values = [  ]
+constant = Color( 0.617188, 1, 0, 1 )
+
+[sub_resource type="VisualShader" id=4]
+code = "shader_type canvas_item;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(0.617188, 1.000000, 0.000000);
+	float n_out2p1 = 1.000000;
+
+// Output:0
+	COLOR.rgb = n_out2p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+version = "4.0"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2( 480, 80 )
+nodes/fragment/2/node = SubResource( 3 )
+nodes/fragment/2/position = Vector2( 300, 140 )
+nodes/fragment/connections = PackedInt32Array( 2, 0, 0, 0 )
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+
+[node name="TestShaderMaterial2D" type="Node2D"]
+script = null
+
+[node name="SpriteShaderText" type="Sprite2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+script = null
+
+[node name="SpriteShaderVisual" type="Sprite2D" parent="."]
+material = SubResource( 5 )
+position = Vector2( 224, 48 )
+texture = ExtResource( 1 )
+script = null

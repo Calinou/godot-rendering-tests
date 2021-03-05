@@ -3,7 +3,7 @@
 [ext_resource path="res://textures/godot_icon.png" type="Texture2D" id=1]
 [ext_resource path="res://textures/checkerboard_muted.png" type="Texture2D" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="TestCanvasGroup" type="Node2D"]
 script = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
