@@ -57,12 +57,12 @@ script = null
 
 [node name="SpriteShaderText" type="Sprite2D" parent="."]
 material = SubResource( 2 )
-position = Vector2( 48, 48 )
+position = Vector2( 592, 360 )
 texture = ExtResource( 1 )
 script = null
 
 [node name="SpriteShaderVisual" type="Sprite2D" parent="."]
 material = SubResource( 5 )
-position = Vector2( 224, 48 )
+position = Vector2( 768, 360 )
 texture = ExtResource( 1 )
 script = null
