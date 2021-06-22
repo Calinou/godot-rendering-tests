@@ -19,5 +19,10 @@ environment = SubResource( 3 )
 script = ExtResource( 1 )
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform( -0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 11.5, 6, -11.5 )
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 11.5, 6, -11.5)
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 11.5, 6, -11.5)
+visible = false
 script = null

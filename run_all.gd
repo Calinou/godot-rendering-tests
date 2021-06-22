@@ -3,6 +3,7 @@ extends Node
 # Array of strings with scene file names (no extension).
 var test_scenes := []
 
+
 func _ready() -> void:
 	var dir := Directory.new()
 	if dir.open("res://tests/3d") == OK:
@@ -25,22 +26,29 @@ func _ready() -> void:
 		var test: Node = load("res://tests/%s.tscn" % test_scene).instance()
 		add_child(test)
 
-		# FIXME: Take screenshots of every scene.
-
-		var viewport := get_viewport()
-
-		#viewport.set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
-		var image := viewport.get_texture().get_data()
-
-		#viewport.set_clear_mode(Viewport.CLEAR_MODE_ALWAYS)
-
-		# Screenshot file name with ISO 8601-like date
-		var datetime := OS.get_datetime()
-		for key in datetime:
-			datetime[key] = str(datetime[key]).pad_zeros(2)
-
-		var error := image.save_png("res://results/3d/%s.png" % test_scene)
-		if error != OK:
-			push_error("Couldn't save screenshot.")
+		await take_screenshot(test_scene)
 
 		test.queue_free()
+
+
+func take_screenshot(basename: String) -> void:
+	var viewport := get_viewport()
+	
+	# Wait some frames to get an up-to-date screenshot.
+	await get_tree().process_frame
+	await get_tree().process_frame
+
+	# FIXME: Changing the render target clear mode is not needed anymore?
+	#viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ONCE
+	var image: Image = viewport.get_texture().get_image()
+	#viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS
+	
+
+	# Screenshot file name with ISO 8601-like date.
+	var datetime := Time.get_datetime_dict_from_system()
+	var error := image.save_png(
+		"results/3d/%s.png" % basename
+	)
+
+	if error != OK:
+		push_error("Couldn't save screenshot.")
