@@ -15,6 +15,8 @@ func _ready() -> void:
 
 			file_name = dir.get_next()
 
+		# Results may not be sorted alphabetically, so ensure this to improve determinism.
+		test_scenes.sort()
 		print("Found %d 3D test scenes in the `tests/3d` folder." % test_scenes.size())
 	else:
 		push_error("An error occurred when trying to access res://tests/3d.")
@@ -23,7 +25,7 @@ func _ready() -> void:
 
 	for test_scene in test_scenes:
 		print("Loading 3D test scene: %s" % test_scene)
-		var test: Node = load("res://tests/%s.tscn" % test_scene).instance()
+		var test: Node = load("res://tests/3d/%s.tscn" % test_scene).instantiate()
 		add_child(test)
 
 		await take_screenshot(test_scene)
@@ -36,19 +38,13 @@ func take_screenshot(basename: String) -> void:
 	
 	# Wait some frames to get an up-to-date screenshot.
 	await get_tree().process_frame
-	await get_tree().process_frame
 
 	# FIXME: Changing the render target clear mode is not needed anymore?
 	#viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ONCE
 	var image: Image = viewport.get_texture().get_image()
 	#viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS
 	
-
-	# Screenshot file name with ISO 8601-like date.
-	var datetime := Time.get_datetime_dict_from_system()
-	var error := image.save_png(
-		"results/3d/%s.png" % basename
-	)
-
-	if error != OK:
-		push_error("Couldn't save screenshot.")
+	var output_path := "results/3d/%s.png" % basename
+	print("Saving screenshot: %s" % output_path)
+	image.save_png(output_path)
+	

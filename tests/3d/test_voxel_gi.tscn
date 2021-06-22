@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://tests/3d/test_voxel_gi.VoxelGI_data.res" type="VoxelGIData" id=1]
+
+[sub_resource type="BoxMesh" id=1]
+
+[sub_resource type="StandardMaterial3D" id=5]
+albedo_color = Color(0.0901961, 0.556863, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id=6]
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id=2]
+size = Vector3(32, 2, 32)
+
+[sub_resource type="BoxMesh" id=3]
+size = Vector3(4, 2, 4)
+
+[sub_resource type="StandardMaterial3D" id=4]
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id=7]
+
+[sub_resource type="StandardMaterial3D" id=8]
+albedo_color = Color(0.513726, 1, 0.121569, 1)
+
+[node name="Node3D" type="Node3D"]
+script = null
+
+[node name="VoxelGI" type="VoxelGI" parent="."]
+extents = Vector3(16, 4, 16)
+data = ExtResource( 1 )
+script = null
+
+[node name="Box" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+gi_mode = 1
+mesh = SubResource( 1 )
+surface_material_override/0 = SubResource( 5 )
+script = null
+
+[node name="BoxEmissive" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -3, 2, -4)
+gi_mode = 1
+mesh = SubResource( 1 )
+surface_material_override/0 = SubResource( 6 )
+script = null
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+gi_mode = 1
+mesh = SubResource( 2 )
+surface_material_override/0 = null
+script = null
+
+[node name="GroundReflective" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871555, 0, 0.0871555, 0.996195, -1.42329, 0.2, -2)
+gi_mode = 1
+mesh = SubResource( 3 )
+surface_material_override/0 = SubResource( 4 )
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.445382, 0.546881, -0.708912, 0, 0.791779, 0.610807, 0.895341, -0.272042, 0.352644, -4.3113, 4.49009, 1.68751)
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.998189, -0.02062, 0.0565061, 0, 0.939407, 0.342805, -0.0601508, -0.342184, 0.937706, -0.620251, 3.93277, 5.21746)
+shadow_bias = 0.005
+directional_shadow_max_distance = 250.0
+script = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.89879, -1.73066)
+gi_mode = 1
+mesh = SubResource( 7 )
+surface_material_override/0 = SubResource( 8 )
+script = null
