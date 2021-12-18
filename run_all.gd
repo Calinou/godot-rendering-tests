@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 	# Run 2D scenes.
 	if dir.open("res://tests/2d") == OK:
-		dir.list_dir_begin(true)
+		dir.list_dir_begin()
 		var file_name := dir.get_next()
 		while file_name != "":
 			if not dir.current_is_dir() and file_name.ends_with(".tscn"):
@@ -39,7 +39,7 @@ func _ready() -> void:
 	
 	# Run 3D scenes.
 	if dir.open("res://tests/3d") == OK:
-		dir.list_dir_begin(true)
+		dir.list_dir_begin()
 		var file_name := dir.get_next()
 		while file_name != "":
 			if not dir.current_is_dir() and file_name.ends_with(".tscn"):
