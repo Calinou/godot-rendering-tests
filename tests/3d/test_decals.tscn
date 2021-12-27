@@ -20,8 +20,9 @@ transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -2, 0, -1)
 mesh = SubResource( "2" )
 surface_material_override/0 = null
 
-[node name="Capsule2" type="MeshInstance3D" parent="."]
+[node name="CapsuleLayer2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.612372, -0.353553, 0.707107, -0.5, 0.866025, 0, -0.612372, -0.353553, -0.707107, 0, -1, -4)
+layers = 2
 mesh = SubResource( "2" )
 surface_material_override/0 = null
 
@@ -48,6 +49,15 @@ albedo_mix = 0.0
 upper_fade = 0.0
 lower_fade = 0.0
 
+[node name="DecalOrmOnlyLayer2" type="Decal" parent="."]
+transform = Transform3D(-0.043604, 0.498095, -0.866025, -0.99619, -0.087208, 0, -0.0755244, 0.862726, 0.5, -0.803861, 0, -4.92578)
+texture_albedo = ExtResource( "1" )
+texture_orm = ExtResource( "1" )
+albedo_mix = 0.0
+upper_fade = 0.0
+lower_fade = 0.0
+cull_mask = 1048574
+
 [node name="DecalEmission" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190534, 0, -2.84789)
 texture_emission = ExtResource( "1" )
@@ -62,3 +72,4 @@ modulate = Color(1, 0, 0, 1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.447012, -0.615162, 0.649428, 0, 0.726, 0.687694, -0.894528, -0.307407, 0.32453, 0.874516, 3.85913, 1.26953)
+visible = false
