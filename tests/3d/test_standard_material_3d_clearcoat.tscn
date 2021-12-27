@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://hoeojn6l7v68"]
+[gd_scene load_steps=6 format=3 uid="uid://hoeojn6l7v68"]
+
+[sub_resource type="Environment" id="Environment_qs0ul"]
 
 [sub_resource type="SphereMesh" id="1"]
 
@@ -16,7 +18,8 @@ albedo_color = Color(0.2, 0, 0.00392157, 1)
 clearcoat_enabled = true
 clearcoat_gloss = 1.0
 
-[node name="Node3D" type="Node3D"]
+[node name="TestStandardMaterial3DClearcoat" type="WorldEnvironment"]
+environment = SubResource( "Environment_qs0ul" )
 
 [node name="SphereClearcoatGloss0" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)

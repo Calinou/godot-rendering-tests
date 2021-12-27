@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwf27lervtbn1"]
+[gd_scene load_steps=4 format=3 uid="uid://cwf27lervtbn1"]
+
+[sub_resource type="Environment" id="Environment_yquj7"]
 
 [sub_resource type="PlaneMesh" id="1"]
 size = Vector2(512, 512)
@@ -7,7 +9,8 @@ subdivide_depth = 2
 
 [sub_resource type="CylinderMesh" id="2"]
 
-[node name="TestOmniLight" type="Node3D"]
+[node name="TestOmniLight" type="WorldEnvironment"]
+environment = SubResource( "Environment_yquj7" )
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 mesh = SubResource( "1" )

@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1vxdpw3hu6ft"]
+[gd_scene load_steps=7 format=3 uid="uid://c1vxdpw3hu6ft"]
 
 [ext_resource type="Texture2D" uid="uid://huw1i7xgbdn5" path="res://textures/checkerboard.png" id="1"]
+
+[sub_resource type="Environment" id="Environment_rua4y"]
 
 [sub_resource type="SphereMesh" id="1"]
 
@@ -23,7 +25,8 @@ rim_enabled = true
 rim_tint = 1.0
 rim_texture = ExtResource( "1" )
 
-[node name="Node3D" type="Node3D"]
+[node name="TestStandardMaterial3DRim" type="WorldEnvironment"]
+environment = SubResource( "Environment_rua4y" )
 
 [node name="SphereRim" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)

@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://m1xhd0hgvxkt"]
+[gd_scene load_steps=8 format=3 uid="uid://m1xhd0hgvxkt"]
+
+[sub_resource type="Environment" id="Environment_lroen"]
 
 [sub_resource type="SphereMesh" id="1"]
 
@@ -25,7 +27,8 @@ grow_amount = 1.0
 [sub_resource type="StandardMaterial3D" id="6"]
 next_pass = SubResource( "5" )
 
-[node name="Node3D" type="Node3D"]
+[node name="TestStandardMaterial3DGrow" type="WorldEnvironment"]
+environment = SubResource( "Environment_lroen" )
 
 [node name="SphereClearcoatGrowNegative" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)

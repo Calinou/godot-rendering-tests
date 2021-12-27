@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b87ecve275dcy"]
+[gd_scene load_steps=3 format=3 uid="uid://b87ecve275dcy"]
+
+[sub_resource type="Environment" id="Environment_jenwk"]
 
 [sub_resource type="SphereMesh" id="1"]
 
-[node name="TestShaderMaterial3D" type="Node3D"]
+[node name="TestShaderMaterial3D" type="WorldEnvironment"]
+environment = SubResource( "Environment_jenwk" )
 
 [node name="SphereShaderText" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
