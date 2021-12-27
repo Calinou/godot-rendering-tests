@@ -1,21 +1,27 @@
-[gd_scene load_steps=15 format=3 uid="uid://duxkt5vmf5x2e"]
+[gd_scene load_steps=14 format=3 uid="uid://duxkt5vmf5x2e"]
 
-[ext_resource type="VoxelGIData" uid="uid://8votyk8jxls7" path="res://tests/3d/test_voxel_gi.VoxelGI_data.res" id="1"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qx2ma"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u50pi"]
 sky_top_color = Color(0.568627, 0.698039, 0.807843, 1)
 sky_horizon_color = Color(0.672549, 0.704902, 0.734314, 1)
 ground_bottom_color = Color(0.121569, 0.121569, 0.129412, 1)
 ground_horizon_color = Color(0.672549, 0.704902, 0.734314, 1)
 
-[sub_resource type="Sky" id="Sky_lagh1"]
-sky_material = SubResource( "ProceduralSkyMaterial_qx2ma" )
+[sub_resource type="Sky" id="Sky_ns62a"]
+sky_material = SubResource( "ProceduralSkyMaterial_u50pi" )
 
-[sub_resource type="Environment" id="Environment_vil06"]
+[sub_resource type="Environment" id="Environment_s75mx"]
 background_mode = 2
-sky = SubResource( "Sky_lagh1" )
+sky = SubResource( "Sky_ns62a" )
 tonemap_mode = 3
 tonemap_white = 6.0
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = true
+sdfgi_bounce_feedback = 0.5
+sdfgi_min_cell_size = 0.1
+sdfgi_cascade0_distance = 6.4
+sdfgi_max_distance = 409.6
+sdfgi_y_scale = 2
 
 [sub_resource type="BoxMesh" id="1"]
 
@@ -49,14 +55,10 @@ albedo_color = Color(0.513726, 1, 0.121569, 1)
 metallic = 1.0
 roughness = 0.0
 
-[node name="TestVoxelGI" type="Node3D"]
+[node name="TestSDFGI" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( "Environment_vil06" )
-
-[node name="VoxelGI" type="VoxelGI" parent="."]
-extents = Vector3(16, 4, 16)
-data = ExtResource( "1" )
+environment = SubResource( "Environment_s75mx" )
 
 [node name="Box" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
