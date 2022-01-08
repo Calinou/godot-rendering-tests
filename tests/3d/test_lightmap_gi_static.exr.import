@@ -1,0 +1,28 @@
+[remap]
+
+importer="2d_array_texture"
+type="StreamTexture2DArray"
+uid="uid://y5thctt6obf4"
+path.s3tc="res://.godot/imported/test_lightmap_gi_static.exr-9ed0525ccedd5438204ff8bccdfadac6.s3tc.stexarray"
+path.etc2="res://.godot/imported/test_lightmap_gi_static.exr-9ed0525ccedd5438204ff8bccdfadac6.etc2.stexarray"
+metadata={
+"imported_formats": ["s3tc", "etc2"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://tests/3d/test_lightmap_gi_static.exr"
+dest_files=["res://.godot/imported/test_lightmap_gi_static.exr-9ed0525ccedd5438204ff8bccdfadac6.s3tc.stexarray", "res://.godot/imported/test_lightmap_gi_static.exr-9ed0525ccedd5438204ff8bccdfadac6.etc2.stexarray"]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=1
