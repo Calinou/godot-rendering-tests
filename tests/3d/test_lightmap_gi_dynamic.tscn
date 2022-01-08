@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://da21nu3dscqp6"]
+[gd_scene load_steps=12 format=3 uid="uid://da21nu3dscqp6"]
 
 [ext_resource type="PackedScene" uid="uid://cojuc4hky14cl" path="res://tests/3d/test_lightmap_gi/level.glb" id="1_ucr6f"]
 [ext_resource type="LightmapGIData" uid="uid://b7yacvra6oaus" path="res://tests/3d/test_lightmap_gi_dynamic.lmbake" id="2_fhd8c"]
@@ -49,6 +49,8 @@ albedo_color = Color(1, 0.25098, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjmvd"]
 emission_enabled = true
 emission = Color(0.752941, 1, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_pkn1t"]
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource( "Environment_rwbdf" )
@@ -153,6 +155,50 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 
 [node name="LightmapProbe10" type="LightmapProbe" parent="."]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.8, 1.3, 3.7)
+
+[node name="SphereBakeDisabled" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 3, 0)
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDynamic" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 3, 0)
+gi_mode = 2
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDisabled2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 3, -30)
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDynamic2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 3, -30)
+gi_mode = 2
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDisabled3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 3, -30)
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDynamic3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 3, -30)
+gi_mode = 2
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDisabled4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.696501, 0.397587, -0.597336, 0, 0.83246, 0.554085, 0.717556, -0.385921, 0.579809, 32.1628, -0.967367, 20.9432)
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
+
+[node name="SphereBakeDynamic4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.696501, 0.397587, -0.597336, 0, 0.83246, 0.554085, 0.717556, -0.385921, 0.579809, 33.5558, -0.967367, 22.3784)
+gi_mode = 2
+mesh = SubResource( "SphereMesh_pkn1t" )
+surface_material_override/0 = null
 
 [editable path="levelOrange"]
 [editable path="levelEmissiveGreen"]
