@@ -21,7 +21,3 @@ window/size/width=1152
 window/size/height=864
 window/dpi/allow_hidpi=true
 window/vsync/vsync_mode=0
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
