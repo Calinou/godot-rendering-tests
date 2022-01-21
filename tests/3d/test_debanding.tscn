@@ -18,7 +18,6 @@ transform = Transform3D(0.529912, 0.307371, -0.79039, 0, 0.932006, 0.362443, 0.8
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 mesh = SubResource( "2" )
-surface_material_override/0 = null
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.1625, -0.367198, 0.915838, 0, 0.928175, 0.372144, -0.986709, -0.0604734, 0.150829, 2.80776, 2.58225, 2.83678)

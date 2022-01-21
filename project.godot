@@ -17,7 +17,6 @@ config/features=PackedStringArray("4.0")
 
 [display]
 
+window/vsync/vsync_mode=0
 window/size/width=1152
 window/size/height=864
-window/dpi/allow_hidpi=true
-window/vsync/vsync_mode=0
