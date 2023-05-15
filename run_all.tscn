@@ -3,4 +3,4 @@
 [ext_resource type="Script" path="res://run_all.gd" id="1"]
 
 [node name="RunAll" type="Node"]
-script = ExtResource( "1" )
+script = ExtResource("1")

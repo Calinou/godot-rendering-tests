@@ -6,12 +6,12 @@ var test_scenes_2d := []
 
 
 func _ready() -> void:
-	var dir := Directory.new()
-	dir.make_dir_recursive("res://results/2d")
-	dir.make_dir_recursive("res://results/3d")
+	DirAccess.make_dir_recursive_absolute("res://results/2d")
+	DirAccess.make_dir_recursive_absolute("res://results/3d")
 
 	# Run 2D scenes.
-	if dir.open("res://tests/2d") == OK:
+	var dir := DirAccess.open("res://tests/2d")
+	if dir:
 		dir.list_dir_begin()
 		var file_name := dir.get_next()
 		while file_name != "":
@@ -35,10 +35,9 @@ func _ready() -> void:
 
 		test.queue_free()
 
-	dir = Directory.new()
-
 	# Run 3D scenes.
-	if dir.open("res://tests/3d") == OK:
+	dir = DirAccess.open("res://tests/3d")
+	if dir:
 		dir.list_dir_begin()
 		var file_name := dir.get_next()
 		while file_name != "":
@@ -67,16 +66,12 @@ func _ready() -> void:
 
 
 func take_screenshot(output_path: String) -> void:
-	var viewport := get_viewport()
-
 	# Wait some frames to get an up-to-date screenshot.
-	await get_tree().process_frame
+	# This is required for TAA, volumetric fog and SDFGI to have the time to converge.
+	for __ in 30:
+		await get_tree().process_frame
 
-	# FIXME: Changing the render target clear mode is not needed anymore?
-	#viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ONCE
+	var viewport := get_viewport()
 	var image: Image = viewport.get_texture().get_image()
-	#viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS
-
 	print("Saving screenshot: %s" % output_path)
 	image.save_png(output_path)
-

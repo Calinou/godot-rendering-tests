@@ -1,9 +1,9 @@
 [remap]
 
 importer="texture"
-type="StreamTexture2D"
+type="CompressedTexture2D"
 uid="uid://bw4jfsajtm0ma"
-path="res://.godot/imported/checkerboard_alpha.png-d443b8cfdc553f97d686831457170bb9.stex"
+path="res://.godot/imported/checkerboard_alpha.png-d443b8cfdc553f97d686831457170bb9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,17 +11,16 @@ metadata={
 [deps]
 
 source_file="res://textures/checkerboard_alpha.png"
-dest_files=["res://.godot/imported/checkerboard_alpha.png-d443b8cfdc553f97d686831457170bb9.stex"]
+dest_files=["res://.godot/imported/checkerboard_alpha.png-d443b8cfdc553f97d686831457170bb9.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
-compress/streamed=false
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
@@ -29,7 +28,7 @@ roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
-process/HDR_as_SRGB=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=0
-svg/scale=1.0

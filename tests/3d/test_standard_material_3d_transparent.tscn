@@ -30,7 +30,7 @@ alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 shading_mode = 0
 albedo_color = Color(1, 1, 1, 0.0509804)
-albedo_texture = ExtResource( "1" )
+albedo_texture = ExtResource("1")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="StandardMaterial3D" id="13"]
@@ -40,31 +40,31 @@ alpha_antialiasing_mode = 1
 alpha_antialiasing_edge = 0.0
 shading_mode = 0
 albedo_color = Color(1, 1, 1, 0.0509804)
-albedo_texture = ExtResource( "1" )
+albedo_texture = ExtResource("1")
 uv1_scale = Vector3(3, 2, 1)
 
 [node name="TestStandardMaterial3DTransparent" type="WorldEnvironment"]
-environment = SubResource( "1" )
+environment = SubResource("1")
 
 [node name="CapsuleMul" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -8)
-mesh = SubResource( "2" )
-surface_material_override/0 = SubResource( "8" )
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("8")
 
 [node name="CapsuleAdd" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -8)
-mesh = SubResource( "2" )
-surface_material_override/0 = SubResource( "9" )
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("9")
 
 [node name="CapsuleSub" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -8.00044)
-mesh = SubResource( "2" )
-surface_material_override/0 = SubResource( "10" )
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("10")
 
 [node name="CapsuleMix" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -8)
-mesh = SubResource( "2" )
-surface_material_override/0 = SubResource( "11" )
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("11")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.702746, 0.00307796, -0.711434, 0, 0.999991, 0.00432637, 0.711441, -0.00304034, 0.702739, -2.13797, 2.42839, -1.56112)
@@ -74,10 +74,10 @@ transform = Transform3D(-0.82113, 0.412642, -0.394299, -0.130715, 0.536524, 0.83
 
 [node name="PlaneAlphaScissor" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.929126, 0.330033, 0.166741, -0.320224, 0.943661, -0.0834295, -0.184881, 0.0241221, 0.982465, 5.94606, 2.47973, -2)
-mesh = SubResource( "7" )
-surface_material_override/0 = SubResource( "12" )
+mesh = SubResource("7")
+surface_material_override/0 = SubResource("12")
 
 [node name="PlaneAlphaScissorAntialias" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.929126, 0.330033, 0.166741, -0.320224, 0.943661, -0.0834295, -0.184881, 0.0241221, 0.982465, 5.94606, 2.47973, -5)
-mesh = SubResource( "7" )
-surface_material_override/0 = SubResource( "13" )
+mesh = SubResource("7")
+surface_material_override/0 = SubResource("13")

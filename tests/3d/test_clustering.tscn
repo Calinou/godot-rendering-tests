@@ -8,8 +8,8 @@
 size = Vector2(135, 135)
 
 [node name="TestClustering" type="WorldEnvironment"]
-environment = SubResource( "Environment_kg4i4" )
-script = ExtResource( "1_y6hls" )
+environment = SubResource("Environment_kg4i4")
+script = ExtResource("1_y6hls")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 visible = false
@@ -18,4 +18,4 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 88.5, 0)
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-mesh = SubResource( "PlaneMesh_uro14" )
+mesh = SubResource("PlaneMesh_uro14")

@@ -10,14 +10,14 @@ subdivide_width = 2
 subdivide_depth = 2
 
 [node name="TestDebanding" type="WorldEnvironment"]
-environment = SubResource( "Environment_4x3sa" )
-script = ExtResource( "1_csbc2" )
+environment = SubResource("Environment_4x3sa")
+script = ExtResource("1_csbc2")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.529912, 0.307371, -0.79039, 0, 0.932006, 0.362443, 0.848053, -0.192063, 0.493881, -7.50016, 0.650325, -0.00600052)
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-mesh = SubResource( "2" )
+mesh = SubResource("2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.1625, -0.367198, 0.915838, 0, 0.928175, 0.372144, -0.986709, -0.0604734, 0.150829, 2.80776, 2.58225, 2.83678)

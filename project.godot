@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Godot Rendering Tests"
 run/main_scene="res://run_all.tscn"
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
-config/features=PackedStringArray("4.0")
 
 [display]
 

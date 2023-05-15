@@ -6,48 +6,50 @@
 [sub_resource type="Environment" id="Environment_ru358"]
 
 [sub_resource type="SphereMesh" id="1"]
+radius = 1.0
+height = 2.0
 
 [sub_resource type="StandardMaterial3D" id="2"]
-albedo_texture = ExtResource( "1" )
+albedo_texture = ExtResource("1")
 heightmap_enabled = true
-heightmap_texture = ExtResource( "2" )
+heightmap_texture = ExtResource("2")
 uv1_scale = Vector3(2, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="3"]
-albedo_texture = ExtResource( "1" )
+albedo_texture = ExtResource("1")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 8
 heightmap_max_layers = 32
-heightmap_texture = ExtResource( "2" )
+heightmap_texture = ExtResource("2")
 uv1_scale = Vector3(2, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="4"]
-albedo_texture = ExtResource( "1" )
+albedo_texture = ExtResource("1")
 heightmap_enabled = true
 heightmap_scale = 0.15
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource( "2" )
+heightmap_texture = ExtResource("2")
 uv1_scale = Vector3(2, 1, 1)
 
 [node name="TestStandardMaterial3DHeight" type="WorldEnvironment"]
-environment = SubResource( "Environment_ru358" )
+environment = SubResource("Environment_ru358")
 
 [node name="SphereHeight" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
-mesh = SubResource( "1" )
-surface_material_override/0 = SubResource( "2" )
+mesh = SubResource("1")
+surface_material_override/0 = SubResource("2")
 
 [node name="SphereHeightDeepParallaxLow" type="MeshInstance3D" parent="."]
-mesh = SubResource( "1" )
-surface_material_override/0 = SubResource( "3" )
+mesh = SubResource("1")
+surface_material_override/0 = SubResource("3")
 
 [node name="SphereHeightDeepParallaxHigh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
-mesh = SubResource( "1" )
-surface_material_override/0 = SubResource( "4" )
+mesh = SubResource("1")
+surface_material_override/0 = SubResource("4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.917118, 0.219708, -0.3326, 0, 0.834388, 0.551178, 0.398616, -0.505496, 0.765232, 1.68294, 1.9177, 3.0806)

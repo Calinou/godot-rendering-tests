@@ -8,16 +8,16 @@ subdivide_width = 2
 subdivide_depth = 2
 
 [sub_resource type="BoxMesh" id="2"]
+size = Vector3(2, 2, 2)
 
 [sub_resource type="CapsuleMesh" id="3"]
 radius = 0.2
 
 [node name="TestSpotLight" type="WorldEnvironment"]
-environment = SubResource( "Environment_xmxfk" )
+environment = SubResource("Environment_xmxfk")
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-mesh = SubResource( "1" )
-surface_material_override/0 = null
+mesh = SubResource("1")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.210508, -0.401483, 0.891346, 0, 0.911777, 0.410685, -0.977592, -0.0864526, 0.191936, 1.96893, 0.821214, 3.61047)
@@ -61,14 +61,12 @@ spot_range = 15.0
 [node name="BoxLayer5" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 1)
 layers = 16
-mesh = SubResource( "2" )
-surface_material_override/0 = null
+mesh = SubResource("2")
 
 [node name="CapsuleNoLayers" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.2, 3)
 layers = 0
-mesh = SubResource( "3" )
-surface_material_override/0 = null
+mesh = SubResource("3")
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.329964, -0.570139, 0.752373, 0, 0.797011, 0.603965, -0.943994, 0.199286, -0.262985, 4.22446, 6.10813, -1.76358)
