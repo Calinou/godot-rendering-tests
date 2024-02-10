@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="Godot Rendering Tests"
+config/description="Renders various 2D and 3D scenes to check for bugs and visual regressions across Godot versions."
 run/main_scene="res://run_all.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [display]
 
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
-window/size/width=1152
-window/size/height=864
 
 [filesystem]
 
