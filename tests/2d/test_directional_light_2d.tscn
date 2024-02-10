@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjo85os2lrc3k"]
+[gd_scene load_steps=3 format=3 uid="uid://cjo85os2lrc3k"]
 
-[ext_resource type="Texture2D" uid="uid://cfy8t7va2jmua" path="res://textures/godot_icon.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://db8ilxuflejr4" path="res://textures/checkerboard_muted.png" id="2"]
 
 [sub_resource type="OccluderPolygon2D" id="1"]
@@ -24,7 +23,6 @@ region_rect = Rect2(0, 0, 512, 512)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(503.552, 239.224)
-texture = ExtResource("1")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
 z_index = -1
@@ -33,7 +31,6 @@ occluder = SubResource("1")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(326.552, 432.224)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D2"]
 z_index = -1
@@ -42,7 +39,6 @@ occluder = SubResource("1")
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(460.552, 538.224)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D3"]
 z_index = -1
@@ -51,7 +47,6 @@ occluder = SubResource("1")
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(711.552, 237.224)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D4"]
 z_index = -1
@@ -60,7 +55,6 @@ occluder = SubResource("1")
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(224.552, 288.224)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("1")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D5"]
 z_index = -1

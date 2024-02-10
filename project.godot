@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Godot Rendering Tests"
 run/main_scene="res://run_all.tscn"
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [display]
@@ -20,3 +20,7 @@ config/icon="res://icon.png"
 window/vsync/vsync_mode=0
 window/size/width=1152
 window/size/height=864
+
+[filesystem]
+
+import/blender/enabled=false

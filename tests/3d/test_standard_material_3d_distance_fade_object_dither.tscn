@@ -8,8 +8,8 @@
 size = Vector3(32, 2, 32)
 
 [node name="TestStandardMaterial3DDistanceFadeObjectDither" type="WorldEnvironment"]
-environment = SubResource( "Environment_vx1x1" )
-script = ExtResource( "1_udwik" )
+environment = SubResource("Environment_vx1x1")
+script = ExtResource("1_udwik")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 visible = false
@@ -19,8 +19,7 @@ transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
-mesh = SubResource( "BoxMesh_vprbi" )
-surface_material_override/0 = null
+mesh = SubResource("BoxMesh_vprbi")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.107059, 0.637734, -0.76278, 0, 0.767189, 0.641421, 0.994253, -0.0686698, 0.0821345, -11.7061, 7.62534, 3.96163)
