@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://p8wcxfp0ljba"]
 
-[ext_resource type="Script" path="res://tests/3d/test_debanding.gd" id="1_csbc2"]
+[ext_resource type="Script" uid="uid://cce5keh70qyfg" path="res://tests/3d/test_debanding.gd" id="1_csbc2"]
 
 [sub_resource type="Environment" id="Environment_4x3sa"]
 

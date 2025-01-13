@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://boyp35i0cfcie"]
 
-[ext_resource type="Script" path="res://tests/3d/test_pbr_radiance.gd" id="1"]
+[ext_resource type="Script" uid="uid://v8gyaimj1p3k" path="res://tests/3d/test_pbr_radiance.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://d0tt3qrsjtw2c" path="res://textures/hdrihaven_lilienstein_2k.hdr" id="2"]
 
 [sub_resource type="PanoramaSkyMaterial" id="1"]

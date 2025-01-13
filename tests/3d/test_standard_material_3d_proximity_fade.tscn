@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://boyp35i0cfcie"]
 
-[ext_resource type="Script" path="res://tests/3d/test_standard_material_3d_proximity_fade.gd" id="1_d7p4k"]
+[ext_resource type="Script" uid="uid://cv7ljdxjwvvyb" path="res://tests/3d/test_standard_material_3d_proximity_fade.gd" id="1_d7p4k"]
 
 [sub_resource type="Environment" id="Environment_vx1x1"]
 

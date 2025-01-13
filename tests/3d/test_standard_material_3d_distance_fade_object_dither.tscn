@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://boyp35i0cfcie"]
 
-[ext_resource type="Script" path="res://tests/3d/test_standard_material_3d_distance_fade_object_dither.gd" id="1_udwik"]
+[ext_resource type="Script" uid="uid://iewys2h5rmsm" path="res://tests/3d/test_standard_material_3d_distance_fade_object_dither.gd" id="1_udwik"]
 
 [sub_resource type="Environment" id="Environment_vx1x1"]
 

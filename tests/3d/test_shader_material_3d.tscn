@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b87ecve275dcy"]
 
-[ext_resource type="Shader" path="res://tests/3d/test_shader_material_3d.gdshader" id="1_oftk0"]
+[ext_resource type="Shader" uid="uid://dn7ni2ppvlk68" path="res://tests/3d/test_shader_material_3d.gdshader" id="1_oftk0"]
 [ext_resource type="Shader" uid="uid://4xl4s4sobkbv" path="res://tests/3d/test_shader_material_3d.tres" id="2_2eygo"]
 
 [sub_resource type="Environment" id="Environment_jenwk"]

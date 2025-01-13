@@ -2,8 +2,8 @@
 
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
-uid="uid://y5thctt6obf4"
-path.bptc="res://.godot/imported/test_lightmap_gi_static.exr-9ed0525ccedd5438204ff8bccdfadac6.bptc.ctexarray"
+uid="uid://8edyghhdf1pu"
+path.s3tc="res://.godot/imported/test_lightmap_gi_dynamic_shadow.png-2f1a07ed14e8a26a10f2862315669866.s3tc.ctexarray"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tests/3d/test_lightmap_gi_static.exr"
-dest_files=["res://.godot/imported/test_lightmap_gi_static.exr-9ed0525ccedd5438204ff8bccdfadac6.bptc.ctexarray"]
+source_file="res://tests/3d/test_lightmap_gi_dynamic_shadow.png"
+dest_files=["res://.godot/imported/test_lightmap_gi_dynamic_shadow.png-2f1a07ed14e8a26a10f2862315669866.s3tc.ctexarray"]
 
 [params]
 

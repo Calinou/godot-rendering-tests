@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bykb8c2uys0yx"]
 
-[ext_resource type="Script" path="res://tests/3d/test_clustering.gd" id="1_y6hls"]
+[ext_resource type="Script" uid="uid://cnks61o22clyw" path="res://tests/3d/test_clustering.gd" id="1_y6hls"]
 
 [sub_resource type="Environment" id="Environment_kg4i4"]
 

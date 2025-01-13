@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://duxkt5vmf5x2e"]
+[gd_scene load_steps=12 format=3 uid="uid://4cskrlkqxuya"]
 
 [sub_resource type="Environment" id="Environment_6q7ks"]
-tonemap_mode = 3
-tonemap_white = 6.0
+tonemap_mode = 4
 sdfgi_min_cell_size = 0.4
 sdfgi_cascade0_distance = 25.6
 sdfgi_max_distance = 409.6
@@ -45,7 +44,7 @@ bottom_radius = 1.0
 metallic = 1.0
 roughness = 0.0
 
-[node name="TestTonemapACES" type="WorldEnvironment"]
+[node name="TestTonemapAgX" type="WorldEnvironment"]
 environment = SubResource("Environment_6q7ks")
 
 [node name="Box" type="MeshInstance3D" parent="."]

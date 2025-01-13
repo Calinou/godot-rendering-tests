@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://ccjqi2bekc6pa"]
+[gd_scene load_steps=11 format=3 uid="uid://ccjqi2bekc6pa"]
 
-[ext_resource type="Texture2D" uid="uid://huw1i7xgbdn5" path="res://textures/checkerboard.png" id="1_n7y31"]
-[ext_resource type="Texture2D" uid="uid://bin347lkrqebg" path="res://textures/checkerboard_ao.png" id="2_01pjh"]
-[ext_resource type="Texture2D" uid="uid://byhstlkp8kf8p" path="res://textures/checkerboard_normal.png" id="2_865pi"]
+[ext_resource type="Texture2D" uid="uid://yyd65tv82noi" path="res://textures/checkerboard_blurred.png" id="1_2j3xl"]
+[ext_resource type="Texture2D" uid="uid://blxoribjusn2q" path="res://textures/checkerboard_blurred_normal.png" id="2_by2fv"]
 
 [sub_resource type="Environment" id="Environment_pafnt"]
 
@@ -10,73 +9,73 @@
 size = Vector3(2, 2, 128)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ro363"]
-albedo_texture = ExtResource("1_n7y31")
+albedo_texture = ExtResource("1_2j3xl")
 normal_enabled = true
-normal_texture = ExtResource("2_865pi")
+normal_texture = ExtResource("2_by2fv")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource("2_01pjh")
+heightmap_texture = ExtResource("1_2j3xl")
 uv1_scale = Vector3(3, 128, 1)
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqb1r"]
-albedo_texture = ExtResource("1_n7y31")
+albedo_texture = ExtResource("1_2j3xl")
 normal_enabled = true
-normal_texture = ExtResource("2_865pi")
+normal_texture = ExtResource("2_by2fv")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource("2_01pjh")
+heightmap_texture = ExtResource("1_2j3xl")
 uv1_scale = Vector3(3, 128, 1)
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dw7ye"]
-albedo_texture = ExtResource("1_n7y31")
+albedo_texture = ExtResource("1_2j3xl")
 normal_enabled = true
-normal_texture = ExtResource("2_865pi")
+normal_texture = ExtResource("2_by2fv")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource("2_01pjh")
+heightmap_texture = ExtResource("1_2j3xl")
 uv1_scale = Vector3(3, 128, 1)
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5he1t"]
-albedo_texture = ExtResource("1_n7y31")
+albedo_texture = ExtResource("1_2j3xl")
 normal_enabled = true
-normal_texture = ExtResource("2_865pi")
+normal_texture = ExtResource("2_by2fv")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource("2_01pjh")
+heightmap_texture = ExtResource("1_2j3xl")
 uv1_scale = Vector3(3, 128, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l6t66"]
-albedo_texture = ExtResource("1_n7y31")
+albedo_texture = ExtResource("1_2j3xl")
 normal_enabled = true
-normal_texture = ExtResource("2_865pi")
+normal_texture = ExtResource("2_by2fv")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource("2_01pjh")
+heightmap_texture = ExtResource("1_2j3xl")
 uv1_scale = Vector3(3, 128, 1)
 texture_filter = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x53p1"]
-albedo_texture = ExtResource("1_n7y31")
+albedo_texture = ExtResource("1_2j3xl")
 normal_enabled = true
-normal_texture = ExtResource("2_865pi")
+normal_texture = ExtResource("2_by2fv")
 heightmap_enabled = true
 heightmap_deep_parallax = true
 heightmap_min_layers = 64
 heightmap_max_layers = 64
-heightmap_texture = ExtResource("2_01pjh")
+heightmap_texture = ExtResource("1_2j3xl")
 uv1_scale = Vector3(3, 128, 1)
 texture_filter = 5
 

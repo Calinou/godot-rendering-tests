@@ -98,3 +98,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.025, -2)
 light_color = Color(0, 0, 1, 1)
 light_energy = 15.0
 omni_range = 1.0
+
+[node name="OmniLight3DNegative" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.025, -2)
+light_color = Color(0, 0, 1, 1)
+light_energy = 15.0
+light_negative = true
+omni_range = 1.0

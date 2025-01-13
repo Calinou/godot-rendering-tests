@@ -7,11 +7,16 @@ polygon = PackedVector2Array(-20, -109.6, -20, -106.5, -10.8, -89, 10.3, -89, 21
 
 [node name="TestDirectionalLight2D" type="Node2D"]
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+[node name="DirectionalLight2DAdd" type="DirectionalLight2D" parent="."]
 rotation = -0.349066
-energy = 0.2
 shadow_enabled = true
 shadow_filter = 2
+shadow_filter_smooth = 2.0
+
+[node name="DirectionalLight2DSubtract" type="DirectionalLight2D" parent="."]
+rotation = 1.5708
+blend_mode = 1
+shadow_enabled = true
 shadow_filter_smooth = 2.0
 
 [node name="Background" type="Sprite2D" parent="."]
