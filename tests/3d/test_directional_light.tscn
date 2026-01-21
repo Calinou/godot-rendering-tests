@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://hmleqcmxv086"]
+[gd_scene format=3 uid="uid://hmleqcmxv086"]
 
 [sub_resource type="Environment" id="Environment_o7g4b"]
 
@@ -20,39 +20,39 @@ bottom_radius = 1.0
 
 [sub_resource type="PrismMesh" id="5"]
 
-[node name="TestDirectionalLight" type="WorldEnvironment"]
+[node name="TestDirectionalLight" type="WorldEnvironment" unique_id=1130434674]
 environment = SubResource("Environment_o7g4b")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1677110784]
 transform = Transform3D(0.789642, -0.163431, 0.591401, 0, 0.963873, 0.266362, -0.613567, -0.210331, 0.761115, 1.68294, 1.9177, 3.0806)
 shadow_enabled = true
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=2081319873]
 mesh = SubResource("1")
 
-[node name="Box" type="MeshInstance3D" parent="."]
+[node name="Box" type="MeshInstance3D" parent="." unique_id=2047950634]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0)
 mesh = SubResource("2")
 
-[node name="Sphere" type="MeshInstance3D" parent="."]
+[node name="Sphere" type="MeshInstance3D" parent="." unique_id=1361614977]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 mesh = SubResource("3")
 
-[node name="Sphere2" type="MeshInstance3D" parent="."]
+[node name="Sphere2" type="MeshInstance3D" parent="." unique_id=744858746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.2, -2)
 mesh = SubResource("3")
 
-[node name="Sphere3" type="MeshInstance3D" parent="."]
+[node name="Sphere3" type="MeshInstance3D" parent="." unique_id=1578051640]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, -0.7, -2)
 mesh = SubResource("3")
 
-[node name="Cylinder" type="MeshInstance3D" parent="."]
+[node name="Cylinder" type="MeshInstance3D" parent="." unique_id=143480752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 0)
 mesh = SubResource("4")
 
-[node name="Prism" type="MeshInstance3D" parent="."]
+[node name="Prism" type="MeshInstance3D" parent="." unique_id=1889377713]
 transform = Transform3D(0.786288, 0, 0.61786, 0, 1, 0, -0.61786, 0, 0.786288, 6, 1, 0)
 mesh = SubResource("5")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=338756]
 transform = Transform3D(0.969653, 0.133329, -0.204933, 0, 0.838215, 0.54534, 0.244487, -0.52879, 0.812777, 0.0342696, 3.17783, 3.32252)

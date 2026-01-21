@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh32wej3v2ljf"]
+[gd_scene format=3 uid="uid://bh32wej3v2ljf"]
 
 [sub_resource type="Environment" id="Environment_msn7n"]
 
@@ -33,23 +33,23 @@ text = "Hello world!"
 pixel_size = 0.02
 depth = 0.25
 
-[node name="TestLabel3D" type="WorldEnvironment"]
+[node name="TestLabel3D" type="WorldEnvironment" unique_id=970582473]
 environment = SubResource("Environment_msn7n")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1976626064]
 mesh = SubResource("1")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=215059451]
 transform = Transform3D(0.781521, 0.161472, -0.602622, 0, 0.965926, 0.258819, 0.62388, -0.202272, 0.754891, -4.23664, 2.39723, 3.68522)
 fov = 25.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1791997403]
 visible = false
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1857775869]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 1, 0)
 mesh = SubResource("TextMesh_6iita")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1704547072]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.76799, 1, 0.482794)
 mesh = SubResource("TextMesh_phyh0")

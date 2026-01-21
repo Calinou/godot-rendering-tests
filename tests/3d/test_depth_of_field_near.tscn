@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://do06idbof5x7h"]
+[gd_scene format=3 uid="uid://do06idbof5x7h"]
 
 [sub_resource type="Environment" id="Environment_cqdwv"]
 
@@ -15,32 +15,32 @@ dof_blur_near_enabled = true
 dof_blur_near_distance = 5.0
 dof_blur_amount = 0.3
 
-[node name="TestDepthOfFieldNear" type="WorldEnvironment"]
+[node name="TestDepthOfFieldNear" type="WorldEnvironment" unique_id=598655659]
 environment = SubResource("Environment_cqdwv")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1360529544]
 mesh = SubResource("1")
 
-[node name="BoxNear" type="MeshInstance3D" parent="."]
+[node name="BoxNear" type="MeshInstance3D" parent="." unique_id=814037935]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 mesh = SubResource("2")
 
-[node name="BoxMedium" type="MeshInstance3D" parent="."]
+[node name="BoxMedium" type="MeshInstance3D" parent="." unique_id=690401568]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39362, 1, 0.628183)
 mesh = SubResource("2")
 
-[node name="BoxFar" type="MeshInstance3D" parent="."]
+[node name="BoxFar" type="MeshInstance3D" parent="." unique_id=54984549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6)
 mesh = SubResource("2")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1521144013]
 transform = Transform3D(0.856737, -0.0668544, 0.511403, 0, 0.991563, 0.129625, -0.515754, -0.111054, 0.849508, 0.918237, 1.78361, 3.8298)
 attributes = SubResource("CameraAttributesPractical_264ca")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=860929923]
 transform = Transform3D(0.50645, -0.0878547, 0.857782, 0, 0.994796, 0.101888, -0.862269, -0.0516011, 0.503815, -5.08176, 1.78361, 3.8298)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1174932133]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4255, 1.73704, 1.01011)
 light_color = Color(6, 4, 1, 1)
 omni_range = 0.1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddb81q0t8obr6"]
+[gd_scene format=3 uid="uid://ddb81q0t8obr6"]
 
 [ext_resource type="Texture2D" uid="uid://byhstlkp8kf8p" path="res://textures/checkerboard_normal.png" id="3"]
 
@@ -30,29 +30,29 @@ refraction_scale = -1.0
 [sub_resource type="PlaneMesh" id="5"]
 size = Vector2(64, 64)
 
-[node name="TestStandardMaterial3DRefraction" type="WorldEnvironment"]
+[node name="TestStandardMaterial3DRefraction" type="WorldEnvironment" unique_id=1578475002]
 environment = SubResource("Environment_02qvq")
 
-[node name="SphereClearcoatRefraction0_1" type="MeshInstance3D" parent="."]
+[node name="SphereClearcoatRefraction0_1" type="MeshInstance3D" parent="." unique_id=883588038]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
 mesh = SubResource("1")
 surface_material_override/0 = SubResource("6")
 
-[node name="SphereClearcoatRefractionNormal0_1" type="MeshInstance3D" parent="."]
+[node name="SphereClearcoatRefractionNormal0_1" type="MeshInstance3D" parent="." unique_id=2075681730]
 mesh = SubResource("1")
 surface_material_override/0 = SubResource("7")
 
-[node name="SphereClearcoatRefractionMinus1" type="MeshInstance3D" parent="."]
+[node name="SphereClearcoatRefractionMinus1" type="MeshInstance3D" parent="." unique_id=1527858056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
 mesh = SubResource("1")
 surface_material_override/0 = SubResource("8")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1569698659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh = SubResource("5")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1607620570]
 transform = Transform3D(0.488926, 0.587447, -0.644871, 0, 0.739256, 0.673425, 0.872325, -0.329255, 0.361441, 1.68294, 1.9177, 3.0806)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1759033906]
 transform = Transform3D(0.828588, -0.0886391, 0.552797, 0.0304407, 0.993059, 0.113606, -0.55903, -0.0773052, 0.825536, 1.90113, 0.386591, 2.79496)

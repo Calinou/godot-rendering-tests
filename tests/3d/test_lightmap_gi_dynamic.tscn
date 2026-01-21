@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://da21nu3dscqp6"]
+[gd_scene format=4 uid="uid://da21nu3dscqp6"]
 
 [ext_resource type="PackedScene" uid="uid://cojuc4hky14cl" path="res://tests/3d/test_lightmap_gi/level.glb" id="1_ucr6f"]
 [ext_resource type="LightmapGIData" uid="uid://b7yacvra6oaus" path="res://tests/3d/test_lightmap_gi_dynamic.lmbake" id="2_fhd8c"]
@@ -56,18 +56,18 @@ emission = Color(0.752941, 1, 0, 1)
 radius = 1.0
 height = 2.0
 
-[node name="WorldEnvironment" type="WorldEnvironment"]
+[node name="WorldEnvironment" type="WorldEnvironment" unique_id=902067882]
 environment = SubResource("Environment_rwbdf")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1287395117]
 transform = Transform3D(0.625243, -0.13552, 0.768574, 0, 0.984808, 0.173648, -0.780431, -0.108572, 0.615744, 90.2388, 8.81346, 43.8879)
 fov = 40.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=572353862]
 transform = Transform3D(0.502231, 0.397922, -0.767738, 0, 0.887832, 0.460168, 0.864733, -0.231111, 0.445897, -16.6954, 10.0069, 9.69657)
 shadow_enabled = true
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=359613996]
 supersampling = true
 supersampling_factor = 4.0
 shadowmask_mode = 1
@@ -75,128 +75,128 @@ texel_scale = 0.25
 generate_probes_subdiv = 1
 light_data = ExtResource("2_fhd8c")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=954873454]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -5.57619, -15)
 light_color = Color(1, 1, 0, 1)
 shadow_enabled = true
 omni_range = 10.0
 
-[node name="OmniLight3DNoShadows" type="OmniLight3D" parent="."]
+[node name="OmniLight3DNoShadows" type="OmniLight3D" parent="." unique_id=499802075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -9.62135, -17.7554)
 light_color = Color(1, 0.501961, 0, 1)
 omni_range = 15.0
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1021066854]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -9, -7.57619, -24)
 light_color = Color(1, 1, 0, 1)
 shadow_enabled = true
 
-[node name="SpotLight3DNoShadows" type="SpotLight3D" parent="."]
+[node name="SpotLight3DNoShadows" type="SpotLight3D" parent="." unique_id=1772250115]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -4, -6.62135, -23.7554)
 light_color = Color(1, 0.501961, 0, 1)
 
-[node name="OmniLight3DNoBake" type="OmniLight3D" parent="."]
+[node name="OmniLight3DNoBake" type="OmniLight3D" parent="." unique_id=90153705]
 transform = Transform3D(-0.0497539, 0.273584, -0.96056, 0, 0.961752, 0.273923, 0.998762, 0.0136287, -0.0478509, 39.2495, -4.89701, 5.72723)
 light_color = Color(0, 1, 1, 1)
 light_bake_mode = 0
 omni_range = 10.0
 
-[node name="level" parent="." instance=ExtResource("1_ucr6f")]
+[node name="level" parent="." unique_id=1842876689 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.651789, -0.0433787, 1.23467)
 
-[node name="level2" parent="." instance=ExtResource("1_ucr6f")]
+[node name="level2" parent="." unique_id=1093990300 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0.651789, -0.0433787, -25.7653)
 
-[node name="level3" parent="." instance=ExtResource("1_ucr6f")]
+[node name="level3" parent="." unique_id=1529845003 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(0.707107, -0.683013, 0.183013, 0, -0.258819, -0.965926, 0.707107, 0.683013, -0.183013, 36.6518, -0.0433787, -23.7653)
 
-[node name="level4" parent="." instance=ExtResource("1_ucr6f")]
+[node name="level4" parent="." unique_id=800423759 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(0.183013, -0.426777, -0.885646, -0.683013, 0.592752, -0.426777, 0.707107, 0.683013, -0.183013, 36.6518, -0.0433787, -23.7653)
 
-[node name="level5" parent="." instance=ExtResource("1_ucr6f")]
+[node name="level5" parent="." unique_id=2096127395 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(0.183013, -0.426777, -0.885646, -0.683013, 0.592752, -0.426777, 0.707107, 0.683013, -0.183013, 29.6518, -31.0434, 18.2347)
 
-[node name="levelOrange" parent="." instance=ExtResource("1_ucr6f")]
+[node name="levelOrange" parent="." unique_id=1632316745 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(0.183013, 0.0732236, 0.98038, 0.683013, -0.726727, -0.0732233, 0.707107, 0.683013, -0.183013, 29.6518, -52.0434, -35.7653)
 
-[node name="Cube" parent="levelOrange" index="0"]
+[node name="Cube" parent="levelOrange" index="0" unique_id=1895969092]
 transform = Transform3D(0.792882, 0.394394, 0.464538, -0.609137, 0.491442, 0.622448, 0.0171955, -0.776493, 0.629894, 59.5783, 18.0425, 7.93085)
 mesh = SubResource("ArrayMesh_vms57")
 surface_material_override/0 = SubResource("StandardMaterial3D_4ug77")
 
-[node name="levelEmissiveGreen" parent="." instance=ExtResource("1_ucr6f")]
+[node name="levelEmissiveGreen" parent="." unique_id=952257668 instance=ExtResource("1_ucr6f")]
 transform = Transform3D(0.183013, 0.0732236, 0.98038, 0.683013, -0.726727, -0.0732233, 0.707107, 0.683013, -0.183013, 29.6518, -1.04338, -49.7653)
 
-[node name="Cube" parent="levelEmissiveGreen" index="0"]
+[node name="Cube" parent="levelEmissiveGreen" index="0" unique_id=1895969092]
 mesh = SubResource("ArrayMesh_vms57")
 surface_material_override/0 = SubResource("StandardMaterial3D_jjmvd")
 
-[node name="LightmapProbe" type="LightmapProbe" parent="."]
+[node name="LightmapProbe" type="LightmapProbe" parent="." unique_id=2043433448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
 
-[node name="LightmapProbe2" type="LightmapProbe" parent="."]
+[node name="LightmapProbe2" type="LightmapProbe" parent="." unique_id=1539096664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.3, 3)
 
-[node name="LightmapProbe3" type="LightmapProbe" parent="."]
+[node name="LightmapProbe3" type="LightmapProbe" parent="." unique_id=333211381]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 1.3, 3)
 
-[node name="LightmapProbe4" type="LightmapProbe" parent="."]
+[node name="LightmapProbe4" type="LightmapProbe" parent="." unique_id=1124894576]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4, 1.3, 3)
 
-[node name="LightmapProbe5" type="LightmapProbe" parent="."]
+[node name="LightmapProbe5" type="LightmapProbe" parent="." unique_id=1600869383]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4, 1.3, 3)
 
-[node name="LightmapProbe6" type="LightmapProbe" parent="."]
+[node name="LightmapProbe6" type="LightmapProbe" parent="." unique_id=637543008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4, 1.3, 3)
 
-[node name="LightmapProbe7" type="LightmapProbe" parent="."]
+[node name="LightmapProbe7" type="LightmapProbe" parent="." unique_id=1790357110]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.0585786, 1, 3.35858)
 
-[node name="LightmapProbe8" type="LightmapProbe" parent="."]
+[node name="LightmapProbe8" type="LightmapProbe" parent="." unique_id=2083759603]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.8, 1, 3.3)
 
-[node name="LightmapProbe9" type="LightmapProbe" parent="."]
+[node name="LightmapProbe9" type="LightmapProbe" parent="." unique_id=1911073676]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.341421, 1.3, 3.64142)
 
-[node name="LightmapProbe10" type="LightmapProbe" parent="."]
+[node name="LightmapProbe10" type="LightmapProbe" parent="." unique_id=770944347]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.8, 1.3, 3.7)
 
-[node name="SphereBakeDisabled" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDisabled" type="MeshInstance3D" parent="." unique_id=958352071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 3, 0)
 gi_mode = 0
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDynamic" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDynamic" type="MeshInstance3D" parent="." unique_id=1044440514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 3, 0)
 gi_mode = 2
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDisabled2" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDisabled2" type="MeshInstance3D" parent="." unique_id=270905714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 3, -30)
 gi_mode = 0
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDynamic2" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDynamic2" type="MeshInstance3D" parent="." unique_id=1208816867]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 3, -30)
 gi_mode = 2
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDisabled3" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDisabled3" type="MeshInstance3D" parent="." unique_id=103671654]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 3, -30)
 gi_mode = 0
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDynamic3" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDynamic3" type="MeshInstance3D" parent="." unique_id=95598737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 3, -30)
 gi_mode = 2
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDisabled4" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDisabled4" type="MeshInstance3D" parent="." unique_id=317523310]
 transform = Transform3D(0.696501, 0.397587, -0.597336, 0, 0.83246, 0.554085, 0.717556, -0.385921, 0.579809, 32.1628, -0.967367, 20.9432)
 gi_mode = 0
 mesh = SubResource("SphereMesh_pkn1t")
 
-[node name="SphereBakeDynamic4" type="MeshInstance3D" parent="."]
+[node name="SphereBakeDynamic4" type="MeshInstance3D" parent="." unique_id=1025074870]
 transform = Transform3D(0.696501, 0.397587, -0.597336, 0, 0.83246, 0.554085, 0.717556, -0.385921, 0.579809, 33.5558, -0.967367, 22.3784)
 gi_mode = 2
 mesh = SubResource("SphereMesh_pkn1t")

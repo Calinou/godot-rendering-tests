@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://p8wcxfp0ljba"]
+[gd_scene format=3 uid="uid://p8wcxfp0ljba"]
 
 [sub_resource type="Environment" id="1"]
 adjustment_enabled = true
@@ -16,19 +16,19 @@ subdivide_depth = 2
 [sub_resource type="StandardMaterial3D" id="4"]
 albedo_color = Color(1, 0.596078, 0.611765, 1)
 
-[node name="TestAdjustments" type="WorldEnvironment"]
+[node name="TestAdjustments" type="WorldEnvironment" unique_id=398690277]
 environment = SubResource("1")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1773440532]
 transform = Transform3D(0.520295, -0.37768, 0.765931, 0, 0.896889, 0.442256, -0.853987, -0.230104, 0.466647, 2.56888, 2.92548, 2.70527)
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=784125373]
 mesh = SubResource("2")
 
-[node name="Box" type="MeshInstance3D" parent="."]
+[node name="Box" type="MeshInstance3D" parent="." unique_id=153488114]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("3")
 surface_material_override/0 = SubResource("4")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=345069205]
 transform = Transform3D(0.1625, -0.367198, 0.915838, 0, 0.928175, 0.372144, -0.986709, -0.0604734, 0.150829, 2.80776, 2.58225, 2.83678)

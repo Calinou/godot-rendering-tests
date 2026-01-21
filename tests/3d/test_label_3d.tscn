@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwf27lervtbn1"]
+[gd_scene format=3 uid="uid://cwf27lervtbn1"]
 
 [sub_resource type="Environment" id="Environment_msn7n"]
 
@@ -7,25 +7,25 @@ size = Vector2(512, 512)
 subdivide_width = 2
 subdivide_depth = 2
 
-[node name="TestLabel3D" type="WorldEnvironment"]
+[node name="TestLabel3D" type="WorldEnvironment" unique_id=155366949]
 environment = SubResource("Environment_msn7n")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=449393179]
 mesh = SubResource("1")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=806712088]
 transform = Transform3D(0.781521, 0.161472, -0.602622, 0, 0.965926, 0.258819, 0.62388, -0.202272, 0.754891, -4.23664, 2.39723, 3.68522)
 fov = 25.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=454073722]
 visible = false
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="Label3D" type="Label3D" parent="." unique_id=933812952]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 1, 0)
 text = "Hello world!"
 outline_size = 7
 
-[node name="Label3D2" type="Label3D" parent="."]
+[node name="Label3D2" type="Label3D" parent="." unique_id=1611797020]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.475, 1, 1)
 pixel_size = 0.05
 shaded = true

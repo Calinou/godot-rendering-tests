@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0slvoft6ostf"]
+[gd_scene format=3 uid="uid://d0slvoft6ostf"]
 
 [sub_resource type="PhysicalSkyMaterial" id="8"]
 
@@ -33,22 +33,22 @@ material = SubResource("5")
 radius = 1.0
 height = 2.0
 
-[node name="TestFog" type="WorldEnvironment"]
+[node name="TestFog" type="WorldEnvironment" unique_id=1842270295]
 environment = SubResource("1")
 
-[node name="Box" type="MeshInstance3D" parent="."]
+[node name="Box" type="MeshInstance3D" parent="." unique_id=237507454]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 1, 0)
 mesh = SubResource("3")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=665678686]
 mesh = SubResource("4")
 
-[node name="EmissiveSphere" type="MeshInstance3D" parent="."]
+[node name="EmissiveSphere" type="MeshInstance3D" parent="." unique_id=905343809]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 1)
 mesh = SubResource("6")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1199413625]
 transform = Transform3D(0.65525, -0.082212, 0.750925, 0, 0.99406, 0.108831, -0.755412, -0.0713113, 0.651358, 1.86797, 1.49672, 2.72365)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1920361341]
 transform = Transform3D(-0.304655, 0.266494, -0.914421, 0, 0.96006, 0.279795, 0.952463, 0.0852409, -0.292487, 1.3937, 3.10477, 2.5885)

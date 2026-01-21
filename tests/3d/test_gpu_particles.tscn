@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4hn3eqmqvjw6"]
+[gd_scene format=3 uid="uid://c4hn3eqmqvjw6"]
 
 [sub_resource type="Environment" id="Environment_2jdji"]
 
@@ -22,13 +22,13 @@ size = Vector3(160, 2, 160)
 radius = 1.0
 height = 2.0
 
-[node name="TestGPUParticles" type="WorldEnvironment"]
+[node name="TestGPUParticles" type="WorldEnvironment" unique_id=1748407921]
 environment = SubResource("Environment_2jdji")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=922377390]
 transform = Transform3D(0.844348, -0.217055, 0.489861, 0, 0.914269, 0.405108, -0.535796, -0.342052, 0.771961, 2.2855, 1.89007, 3.60166)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1779610469]
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0, 0, 0)
 amount = 200
 lifetime = 3.0
@@ -39,18 +39,18 @@ collision_base_size = 0.05
 process_material = SubResource("ParticlesMaterial_mailk")
 draw_pass_1 = SubResource("BoxMesh_dig5j")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=477838975]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 mesh = SubResource("BoxMesh_gh46k")
 
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Ground"]
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Ground" unique_id=570116597]
 size = Vector3(160, 2, 160)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1720350094]
 transform = Transform3D(0.741945, 0.214382, -0.635262, 0, 0.947501, 0.319753, 0.670461, -0.237239, 0.702994, -0.0631762, 0.410221, 2.17378)
 
-[node name="Sphere" type="MeshInstance3D" parent="."]
+[node name="Sphere" type="MeshInstance3D" parent="." unique_id=392028594]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, -1, -0.4)
 mesh = SubResource("SphereMesh_0hvub")
 
-[node name="GPUParticlesCollisionSphere3D" type="GPUParticlesCollisionSphere3D" parent="Sphere"]
+[node name="GPUParticlesCollisionSphere3D" type="GPUParticlesCollisionSphere3D" parent="Sphere" unique_id=535871361]

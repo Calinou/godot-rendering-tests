@@ -13,7 +13,7 @@ config_version=5
 config/name="Godot Rendering Tests"
 config/description="Renders various 2D and 3D scenes to check for bugs and visual regressions across Godot versions."
 run/main_scene="res://run_all.tscn"
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"
 
 [display]

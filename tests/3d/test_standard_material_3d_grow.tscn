@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://m1xhd0hgvxkt"]
+[gd_scene format=3 uid="uid://m1xhd0hgvxkt"]
 
 [sub_resource type="Environment" id="Environment_lroen"]
 
@@ -29,25 +29,25 @@ grow_amount = 1.0
 [sub_resource type="StandardMaterial3D" id="6"]
 next_pass = SubResource("5")
 
-[node name="TestStandardMaterial3DGrow" type="WorldEnvironment"]
+[node name="TestStandardMaterial3DGrow" type="WorldEnvironment" unique_id=1250611153]
 environment = SubResource("Environment_lroen")
 
-[node name="SphereClearcoatGrowNegative" type="MeshInstance3D" parent="."]
+[node name="SphereClearcoatGrowNegative" type="MeshInstance3D" parent="." unique_id=258392745]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
 mesh = SubResource("1")
 surface_material_override/0 = SubResource("2")
 
-[node name="SphereClearcoatGrowNextPassOutline" type="MeshInstance3D" parent="."]
+[node name="SphereClearcoatGrowNextPassOutline" type="MeshInstance3D" parent="." unique_id=959825046]
 mesh = SubResource("1")
 surface_material_override/0 = SubResource("4")
 
-[node name="SphereClearcoatGrowNextPassShell" type="MeshInstance3D" parent="."]
+[node name="SphereClearcoatGrowNextPassShell" type="MeshInstance3D" parent="." unique_id=1276197019]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
 mesh = SubResource("1")
 surface_material_override/0 = SubResource("6")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=582743625]
 transform = Transform3D(0.488926, 0.587447, -0.644871, 0, 0.739256, 0.673425, 0.872325, -0.329255, 0.361441, 1.68294, 1.9177, 3.0806)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=533218605]
 transform = Transform3D(0.828588, -0.0886391, 0.552797, 0.0304407, 0.993059, 0.113606, -0.55903, -0.0773052, 0.825536, 1.90113, 0.386591, 2.79496)

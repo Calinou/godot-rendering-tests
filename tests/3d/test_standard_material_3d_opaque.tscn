@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cyyg3mlikuyjc"]
+[gd_scene format=3 uid="uid://cyyg3mlikuyjc"]
 
 [ext_resource type="Texture2D" uid="uid://huw1i7xgbdn5" path="res://textures/checkerboard.png" id="1"]
 
@@ -78,85 +78,85 @@ albedo_color = Color(0.5, 2, 60, 1)
 metallic = 1.0
 roughness = 0.0
 
-[node name="TestStandardMaterial3DOpaque" type="WorldEnvironment"]
+[node name="TestStandardMaterial3DOpaque" type="WorldEnvironment" unique_id=1003414182]
 environment = SubResource("1")
 
-[node name="BoxNonMetallic" type="MeshInstance3D" parent="."]
+[node name="BoxNonMetallic" type="MeshInstance3D" parent="." unique_id=1981709904]
 mesh = SubResource("2")
 surface_material_override/0 = SubResource("8")
 
-[node name="BoxMetallic" type="MeshInstance3D" parent="."]
+[node name="BoxMetallic" type="MeshInstance3D" parent="." unique_id=1787510608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 mesh = SubResource("2")
 surface_material_override/0 = SubResource("9")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1714282354]
 transform = Transform3D(-0.662567, -0.381813, 0.644378, 0, 0.860315, 0.509762, -0.749002, 0.337752, -0.570017, 4.53154, 3.77413, -4.47619)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=707146256]
 transform = Transform3D(0.712614, 0.0909388, -0.695637, 0, 0.991563, 0.129624, 0.701556, -0.0923722, 0.706602, -4.28154, 2.18257, 3.40883)
 
-[node name="SphereBacklight" type="MeshInstance3D" parent="."]
+[node name="SphereBacklight" type="MeshInstance3D" parent="." unique_id=1507673421]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("10")
 
-[node name="SphereEmissionAdd" type="MeshInstance3D" parent="."]
+[node name="SphereEmissionAdd" type="MeshInstance3D" parent="." unique_id=1945112594]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("11")
 
-[node name="SphereEmissionMul" type="MeshInstance3D" parent="."]
+[node name="SphereEmissionMul" type="MeshInstance3D" parent="." unique_id=210807761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("12")
 
-[node name="SphereDiffuseBurley" type="MeshInstance3D" parent="."]
+[node name="SphereDiffuseBurley" type="MeshInstance3D" parent="." unique_id=1641887602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4.2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("13")
 
-[node name="SphereDiffuseLambert" type="MeshInstance3D" parent="."]
+[node name="SphereDiffuseLambert" type="MeshInstance3D" parent="." unique_id=702921191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4.2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("14")
 
-[node name="SphereDiffuseLambertWrap" type="MeshInstance3D" parent="."]
+[node name="SphereDiffuseLambertWrap" type="MeshInstance3D" parent="." unique_id=842108821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("15")
 
-[node name="SphereDiffuseToon" type="MeshInstance3D" parent="."]
+[node name="SphereDiffuseToon" type="MeshInstance3D" parent="." unique_id=444482645]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 4.2, -5)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("16")
 
-[node name="SphereSpecularShlickGGX" type="MeshInstance3D" parent="."]
+[node name="SphereSpecularShlickGGX" type="MeshInstance3D" parent="." unique_id=635208472]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27964, -0.8, -8)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("17")
 
-[node name="SphereSpecularBlinn" type="MeshInstance3D" parent="."]
+[node name="SphereSpecularBlinn" type="MeshInstance3D" parent="." unique_id=2078322774]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27964, -0.8, -6)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("18")
 
-[node name="SphereSpecularPhong" type="MeshInstance3D" parent="."]
+[node name="SphereSpecularPhong" type="MeshInstance3D" parent="." unique_id=2082593106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27964, -0.8, -4)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("19")
 
-[node name="SphereSpecularToon" type="MeshInstance3D" parent="."]
+[node name="SphereSpecularToon" type="MeshInstance3D" parent="." unique_id=1877075190]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27964, -0.8, -2)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("20")
 
-[node name="SphereSpecularDisabled" type="MeshInstance3D" parent="."]
+[node name="SphereSpecularDisabled" type="MeshInstance3D" parent="." unique_id=683446229]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27964, -0.8, 0)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("21")
 
-[node name="SphereMetallicBright" type="MeshInstance3D" parent="."]
+[node name="SphereMetallicBright" type="MeshInstance3D" parent="." unique_id=563424987]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32675, -0.529314, -4.65017)
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("22")

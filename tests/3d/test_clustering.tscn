@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bykb8c2uys0yx"]
+[gd_scene format=3 uid="uid://bykb8c2uys0yx"]
 
 [ext_resource type="Script" uid="uid://cnks61o22clyw" path="res://tests/3d/test_clustering.gd" id="1_y6hls"]
 
@@ -7,15 +7,15 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_uro14"]
 size = Vector2(135, 135)
 
-[node name="TestClustering" type="WorldEnvironment"]
+[node name="TestClustering" type="WorldEnvironment" unique_id=1105609819]
 environment = SubResource("Environment_kg4i4")
 script = ExtResource("1_y6hls")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1354063444]
 visible = false
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1620435286]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 88.5, 0)
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=184918183]
 mesh = SubResource("PlaneMesh_uro14")
